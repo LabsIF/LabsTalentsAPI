@@ -1,75 +1,29 @@
-# LabsTalentsAPI
+A API foi construída em NodeJS e ExpressJS utilizando TDD para garantir a qualidade do código. Ela permite o controle de acesso de usuários, com funcionalidades de cadastro, exclusão, atualização e busca de usuários.
 
-Este repositório está vinculado ao projeto da API do sistema LabsTalents
+## Aviso
 
-# API
-
-API construída em NodeJS e ExpressJS utilizando TDD para garantir a qualidade do código. A API permite o controle de acesso de usuários, com funcionalidades de cadastro, exclusão, atualização e busca de usuários.
-
-# Aviso
-
-Cada alteração deve ser documentada, a exemplo das rotas, com detalhes sobre os parâmetros esperados e o formato de retorno. Variaveis de ambientee pacotes novos adicionados e possiveis problemas futuros sobre debugar o projeto e etc.
+Cada alteração deve ser documentada, incluindo as rotas, com detalhes sobre os parâmetros esperados e o formato de retorno. É importante registrar variáveis de ambiente, novos pacotes adicionados e possíveis problemas futuros relacionados ao debug do projeto, entre outros.
 
 ## Tecnologias utilizadas
 
-- <p>NodeJS</p>
-- <p>ExpressJS</p>
-- <p>SequelizeJS</p>
-- <p>postgresSQL</p>
-- <p>Typescript</p>
+- NodeJS
+- ExpressJS
+- SequelizeJS
+- PostgreSQL
+- TypeScript
 
-IMPORTANTE: É necessário ter pelo menos a versão estável mais recente do Node e NPM. Certifique-se de tê-los instalados corretamente para instalar as dependências necessárias e executar o projeto.
+**IMPORTANTE**: Certifique-se de ter instalada a versão estável mais recente do Node e NPM corretamente para instalar as dependências necessárias e executar o projeto, verifique se o tsconfig.json esta correto.
 
-Na pasta "api", crie um arquivo chamado: .env com o seguinte formato:
-
-```
-# database
-DATABASE_URL = 'DIALECT://DB_USER:DB_PASSWORD@DB_HOST:DB_PORT/DB_NAME'
-
-Por exemplo:
-DATABASE_URL = 'postgres://labsif:1234@localhost:5432/eateating'
+Dentro do projeto, crie um arquivo `.env` e adicione as variáveis de ambiente. Use o arquivo `.envexample` como referência.
 
 
-# tokens
-ACCESS_LOCAL_KEY_TOKEN = 'chave do tipo hash md5'
-ACCESS_LOCAL_KEY_TOKEN_REFRESH = 'chave do tipo hash md5'
-
-Para obter as chaves acima  entre no link: https://passwordsgenerator.net/md5-hash-generator/
-Digite palavras aleatórias para obter a chave (a chave das variáveis devem ser diferentes).
-
-
-# localhost
-PORT = 3000
-
-#credenciais para autentição
-ACCESS_LOCAL_KEY_TOKEN_REFRESH = 123456
-ACCESS_LOCAL_KEY_TOKEN = 4567890
-PORT = numero da porta de preferencia 
-
-#nodemailer credenciais para envio de email
-USER_EMAIL = 35e9b6df75846
-PASSWORD_EMAIL = a3f84dce442daf
-HOST = sandbox.smtp.mailtrap.io #transportador de email
-NODEMAILER_EMAIL = exemplo@gmail.com
-
-LINK = localhost:3001 # link do front end onde sera usado no email para redirecionar para a pagina de redefinição de senha
-```
-
-
-### Rotas da aplicação
-
-- /createUser `rota post` recebe um email, um password e um emailRecovery ...
-
-
-## testar envio de e-mails
-
-
-Crie um banco de dados com o nome "LabsTalents" usando o PostgreSQL.
+Certifique-se de criar um banco de dados com o nome "LabsTalents" usando o PostgreSQL.
 
 ## Instalação
 
-1. Clone este repositório
-2. Na raiz do projeto, instale as dependências: `npm install`
-3. Inicie a aplicação em desenvolvimento: `npm run dev`
-4. Gere o buld da aplicação com: `npm run build`
-5. Inicie a aplicação build: `npm run start`
+1. Clone este repositório.
+2. Na raiz do projeto, instale as dependências: `npm install`.
+3. Inicie a aplicação em desenvolvimento: `npm run dev`.
+4. Gere o build da aplicação: `npm run build`.
+5. Inicie a aplicação build: `npm run start` \ ` npm run start:dev `.
+
